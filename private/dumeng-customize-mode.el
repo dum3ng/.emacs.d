@@ -7,6 +7,10 @@
   (dolist (ele from)
     (add-to-list to ele)))
 
+
+(require-package 'rjsx-mode)
+(require-package 'jinja2-mode)
+
 (add-to-list-m 'auto-mode-alist '(("\\.jsx?\\'" . rjsx-mode)
                                   ("\\.jinja\\'" . jinja2-mode)
                                   ("\\.babelrc" . js2-mode)))
