@@ -4,7 +4,7 @@
 
 ;;; Code:
 
-;;(global-set-key (kbd "M-S") 'paredit-splice-sexp)
+(global-set-key (kbd "M-s") 'paredit-splice-sexp)
 
 ;; (global-set-key (kbd  "M-<f7>") 'speedbar-get-focus)
 
