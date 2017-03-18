@@ -71,6 +71,7 @@
 
 (after-load 'org
   (setq org-src-fontify-natively t)
+  (setq org-src-tab-acts-natively t)
   (setq org-src-preserve-indentation t))
 
 (provide 'dumeng-org)

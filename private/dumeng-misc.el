@@ -26,7 +26,16 @@
 
 ;;; theme
 (require-package 'zenburn-theme)
+(set-face-attribute 'region nil :background "#CB4B16"  )
+(set-face-attribute 'highlight nil :background "sienna3"  )
 ;;(load-theme 'zenburn)
+
+
+
+;;; add emoji support
+(require-package 'emojify)
+(require 'emojify)
+(global-emojify-mode 1)
 
 (provide 'dumeng-misc)
 ;;; dumeng-misc ends here
