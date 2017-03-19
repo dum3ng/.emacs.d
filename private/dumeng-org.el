@@ -12,6 +12,14 @@
       calendar-location-name "Shanghai, China"
       forecast-api-key "b4c20f90fcf2ee6a4d314fc8326b78a4")
 
+(defun fix-font ()
+  "The forecast insert newline will lock the font following.
+So we insert a break line .
+Well, not really why this works."
+  (let ((s ""))
+    (put-text-property 0 (length s) 'face 'bold s)
+    (insert s)))
+
 (defun forecast-insert ()
   "insert simple forecast information in current buffer."
   (interactive)
@@ -20,7 +28,8 @@
                               (forecast--insert-summary)
                               (newline)
                               (forecast--insert-sun-moon-graphic)
-                              (newline))
+                              (newline)
+                              (fix-font))
     (progn (forecast--load-data)
            (forecast-insert))))
 
