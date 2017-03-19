@@ -15,6 +15,7 @@
 ;; (require 'dumeng-all-the-icons)
 (require 'dumeng-customize-function)
 (require 'dumeng-customize-mode)
+(require 'dumeng-css)
 (require 'dumeng-dired)
 (require 'dumeng-flycheck)
 (require 'dumeng-flymd)

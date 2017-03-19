@@ -1,7 +1,28 @@
 (require-package 'org-bullets)
 (require 'org-bullets)
+(setq org-bullets-bullet-list '("❁" "❉" "❂" "✺" ))
 
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+
+(require-package 'forecast)
+(require 'forecast)
+(setq calendar-latitude 31.2304
+      calendar-longitude 121.4737
+      calendar-location-name "Shanghai, China"
+      forecast-api-key "b4c20f90fcf2ee6a4d314fc8326b78a4")
+
+(defun forecast-insert ()
+  "insert simple forecast information in current buffer."
+  (interactive)
+  (if forecast--data   (progn (forecast--insert-location)
+                              (newline)
+                              (forecast--insert-summary)
+                              (newline)
+                              (forecast--insert-sun-moon-graphic)
+                              (newline))
+    (progn (forecast--load-data)
+           (forecast-insert))))
 
 ;;; org-publish settting
 
@@ -73,5 +94,7 @@
   (setq org-src-fontify-natively t)
   (setq org-src-tab-acts-natively t)
   (setq org-src-preserve-indentation t))
+
+
 
 (provide 'dumeng-org)
