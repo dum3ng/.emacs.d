@@ -29,6 +29,14 @@ because all compilers consider the number of COLUMN from 1 (just for copy-past)"
 
 (global-set-key (kbd "M-g M-l") 'go-to-line-and-column-cond)
 
+
+;;;
+(defun new-buffer (name)
+  "Create a new buffer with NAME."
+  (interactive "sbuffer name: ")
+  (let ((buffer  (generate-new-buffer name)))
+    (switch-to-buffer buffer)))
+
 
 (provide 'dumeng-customize-function)
 ;;; dumeng-customize-function ends here

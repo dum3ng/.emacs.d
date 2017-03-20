@@ -10,10 +10,12 @@
 
 (require-package 'rjsx-mode)
 (require-package 'jinja2-mode)
+(require-package 'swift-mode)
 
 (add-to-list-m 'auto-mode-alist '(("\\.jsx?\\'" . rjsx-mode)
                                   ("\\.jinja\\'" . jinja2-mode)
-                                  ("\\.babelrc" . js2-mode)))
+                                  ("\\.babelrc" . js2-mode)
+                                  ("\\.swift" . swift-mode)))
 
 
 (add-to-list 'interpreter-mode-alist '("node" . rjsx-mode))
