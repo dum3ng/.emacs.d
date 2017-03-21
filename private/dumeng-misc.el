@@ -37,5 +37,11 @@
 (require 'emojify)
 (global-emojify-mode 1)
 
+
+;;; add writeroom
+(require-package 'writeroom-mode)
+(require 'writeroom-mode)
+(add-hook 'writeroom-mode-hook (lambda () (visual-line-mode 1)))
+
 (provide 'dumeng-misc)
 ;;; dumeng-misc ends here
