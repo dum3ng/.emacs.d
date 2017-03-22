@@ -15,7 +15,8 @@
 (add-to-list-m 'auto-mode-alist '(("\\.jsx?\\'" . rjsx-mode)
                                   ("\\.jinja\\'" . jinja2-mode)
                                   ("\\.babelrc" . js2-mode)
-                                  ("\\.swift" . swift-mode)))
+                                  ("\\.swift" . swift-mode)
+                                  ("\\.bash" . shell-script-mode)))
 
 
 (add-to-list 'interpreter-mode-alist '("node" . rjsx-mode))
