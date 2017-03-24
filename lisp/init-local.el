@@ -28,6 +28,7 @@
 (require 'dumeng-powerline)
 (require 'dumeng-yasnippet)
 ;; (require 'dumeng-test)
+(require 'dumeng-tips)
 
 (provide 'init-local)
 ;;; init-local.el ends here

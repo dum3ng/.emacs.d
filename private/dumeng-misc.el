@@ -26,8 +26,8 @@
 
 ;;; theme
 (require-package 'zenburn-theme)
-(set-face-attribute 'region nil :background "#CB4B16"  )
-(set-face-attribute 'highlight nil :background "sienna3"  )
+(set-face-attribute 'region nil :background "#4F71A0"  )
+(set-face-attribute 'highlight nil :background "firebrick"  )
 ;;(load-theme 'zenburn)
 
 
