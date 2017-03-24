@@ -38,5 +38,9 @@ because all compilers consider the number of COLUMN from 1 (just for copy-past)"
     (switch-to-buffer buffer)))
 
 
+
+(defun insert-time ()
+  (insert (current-time-string)))
+
 (provide 'dumeng-customize-function)
 ;;; dumeng-customize-function ends here
