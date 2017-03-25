@@ -16,7 +16,8 @@
                                   ("\\.jinja\\'" . jinja2-mode)
                                   ("\\.babelrc" . js2-mode)
                                   ("\\.swift" . swift-mode)
-                                  ("\\.bash" . shell-script-mode)))
+                                  ("\\.bash" . shell-script-mode)
+                                  ("\\.st" . smalltalk-mode)))
 
 
 (add-to-list 'interpreter-mode-alist '("node" . rjsx-mode))

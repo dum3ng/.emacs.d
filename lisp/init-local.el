@@ -5,7 +5,7 @@
 ;;; Code:
 
 (add-to-list 'load-path "~/.emacs.d/private")
-
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
 ;;smooth-scrolling
 (require-package 'smooth-scrolling)
 (require 'smooth-scrolling)
