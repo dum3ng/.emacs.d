@@ -77,7 +77,7 @@ Well, not really why this works."
                       :height 0.9
                       :overline '(:color "#808080"))
   (set-face-attribute 'org-code nil
-                      :foreground "#63B132")
+                      :foreground "#75D376")
   (set-face-attribute 'org-verbatim nil
                       :weight 'semibold
                       :foreground "#C89394")

@@ -6,9 +6,9 @@
 
 ;;; remove the auto saved files to temp directory
 (setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
+      `(("." . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
+      `(("." ,temporary-file-directory t)))
 
 
 ;;; for mac user

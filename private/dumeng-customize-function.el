@@ -40,6 +40,7 @@ because all compilers consider the number of COLUMN from 1 (just for copy-past)"
 
 
 (defun insert-time ()
+  (interactive)
   (insert (current-time-string)))
 
 (provide 'dumeng-customize-function)
