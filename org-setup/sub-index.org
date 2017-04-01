@@ -1,0 +1,6 @@
+#+HTML_HEAD: <link href="https://cdn.bootcss.com/normalize/5.0.0/normalize.css" rel="stylesheet">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../static/index.css" />
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../static/mystyle.css" />
+#+html_head: <script src='../static/subindex.js'></script>
+#+HTML_HEAD: <script src='../static/myscript.js'></script>
+#+options: toc:nil

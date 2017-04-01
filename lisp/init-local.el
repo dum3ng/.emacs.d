@@ -22,6 +22,7 @@
 (require 'dumeng-html)
 (require 'dumeng-js)
 (require 'dumeng-misc)
+(require 'dumeng-md)
 (require 'dumeng-neotree)
 (require 'dumeng-org)
 (require 'dumeng-paredit)

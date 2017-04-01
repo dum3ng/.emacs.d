@@ -1,0 +1,14 @@
+#+BEGIN_HTML
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/viebel/klipse/master/dist/codemirror.css">
+
+<script>
+    window.klipse_settings = {
+        selector_eval_python_client: '.lang-klipse-python', // css selector for the html elements you want to klipsify
+ selector_eval_js: '.lang-klipse-js',
+selector_eval_ruby: '.lang-klipse-ruby',
+selector: '.lang-klipse-clojure',
+    };
+</script>
+<script type='text/javascript' src="https://cdn.rawgit.com/viebel/klipse/master/dist/klipse_plugin.js"></script>
+
+#+END_HTML

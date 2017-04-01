@@ -35,23 +35,92 @@ Well, not really why this works."
 
 ;;; org-publish settting
 
-(setq org-publish-project-alist '(("notebook"
-                                   :components ("notebook-src" "notebook-static"))
-                                  ("notebook-src"
-                                   :base-directory "~/notebook/"
-                                   :publishing-directory "~/notebook_site"
-                                   :recursive t
+(setq org-publish-project-alist '(("blog"
+                                   :components ("blog-home" "blog-static"
+                                                "blog-clojure"
+                                                "blog-ios"
+                                                "blog-javascript"
+                                                "blog-linux"
+                                                "blog-node"
+                                                "blog-python"
+                                                "blog-server"
+                                                "blog-web"))
+                                  ("blog-home"
+                                   :base-directory "~/blog"
+                                   :publishing-directory "~/blog_site"
+                                   :recursive nil
                                    :base-extension "org"
                                    :auto-preamble t
                                    :publishing-function org-html-publish-to-html)
-                                  ("notebook-static"
-                                   :base-directory "~/notebook/"
+
+                                  ("blog-clojure"
+                                   :base-directory "~/blog/clojure"
+                                   :publishing-directory "~/blog_site/clojure"
+                                   :recursive t
+                                   :base-extension "org"
+                                   :auto-preamble t
+                                   :publishing-function org-html-publish-to-html
+                                   :makeindex t)
+                                  ("blog-ios"
+                                   :base-directory "~/blog/ios"
+                                   :publishing-directory "~/blog_site/ios"
+                                   :recursive t
+                                   :base-extension "org"
+                                   :auto-preamble t
+                                   :publishing-function org-html-publish-to-html
+                                   :makeindex t)
+                                  ("blog-javascript"
+                                   :base-directory "~/blog/javascript"
+                                   :publishing-directory "~/blog_site/javascript"
+                                   :recursive t
+                                   :base-extension "org"
+                                   :auto-preamble t
+                                   :publishing-function org-html-publish-to-html
+                                   :makeindex t)
+                                  ("blog-linux"
+                                   :base-directory "~/blog/linux"
+                                   :publishing-directory "~/blog_site/linux"
+                                   :recursive t
+                                   :base-extension "org"
+                                   :auto-preamble t
+                                   :publishing-function org-html-publish-to-html
+                                   :makeindex t)
+                                  ("blog-server"
+                                   :base-directory "~/blog/server"
+                                   :publishing-directory "~/blog_site/server"
+                                   :recursive t
+                                   :base-extension "org"
+                                   :auto-preamble t
+                                   :publishing-function org-html-publish-to-html
+                                   :makeindex t)
+                                  ("blog-python"
+                                   :base-directory "~/blog/python"
+                                   :publishing-directory "~/blog_site/python"
+                                   :recursive t
+                                   :base-extension "org"
+                                   :auto-preamble t
+                                   :publishing-function org-html-publish-to-html
+                                   :makeindex t)
+                                  ("blog-web"
+                                   :base-directory "~/blog/web"
+                                   :publishing-directory "~/blog_site/web"
+                                   :recursive t
+                                   :base-extension "org"
+                                   :auto-preamble t
+                                   :publishing-function org-html-publish-to-html
+                                   :makeindex t)
+
+                                  ("blog-static"
+                                   :base-directory "~/blog/"
                                    :base-extension "css\\|js\\|png\\|jpg\\jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-                                   :publishing-directory "~/notebook_site"
+                                   :publishing-directory "~/blog_site"
                                    :recursive t
                                    :publishing-function org-publish-attachment
-                                   )))
+                                   )
+                                  ))
 
+
+;;(setq org-html-head)
 
 ;;; donot use yasnippet mode in org mode
 (remove-hook 'org-mode-hook (lambda () (yas-minor-mode 0)))
