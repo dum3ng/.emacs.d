@@ -26,6 +26,7 @@
 (require 'dumeng-neotree)
 (require 'dumeng-org)
 (require 'dumeng-paredit)
+(require 'dumeng-python)
 (require 'dumeng-powerline)
 (require 'dumeng-yasnippet)
 ;; (require 'dumeng-test)

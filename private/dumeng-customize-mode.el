@@ -17,7 +17,8 @@
                                   ("\\.babelrc" . js2-mode)
                                   ("\\.swift" . swift-mode)
                                   ("\\.bash" . shell-script-mode)
-                                  ("\\.st" . smalltalk-mode)))
+                                  ("\\.st" . smalltalk-mode)
+                                  ("webpack.*\\.config\\'" . rjsx-mode)))
 
 
 (add-to-list 'interpreter-mode-alist '("node" . rjsx-mode))

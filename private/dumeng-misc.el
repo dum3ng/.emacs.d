@@ -10,9 +10,14 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
+(add-to-list 'package-archives
+             `("melpa-stable" . ,(if sanityinc/no-ssl
+                                     "http://stable.melpa.org/packages/"
+                                   "https://stable.melpa.org/packages/")))
 
 ;;; for mac user
-(setq mac-option-modifier 'super)
+(if *is-a-mac*
+    (setq mac-option-modifier 'super))
 
 
 ;;; for default frame
