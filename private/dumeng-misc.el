@@ -40,7 +40,7 @@
 ;;; add emoji support
 (require-package 'emojify)
 (require 'emojify)
-(global-emojify-mode 1)
+;;(global-emojify-mode 1)
 
 
 ;;; add writeroom

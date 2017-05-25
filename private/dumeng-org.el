@@ -1,8 +1,16 @@
+;;; package --- Summary:
+
+;;; Commentary:
+
+;;; Code:
+
 (require-package 'org-bullets)
 (require 'org-bullets)
 (setq org-bullets-bullet-list '("❁" "❉" "❂" "✺" ))
 
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+
 
 
 (require-package 'forecast)
@@ -125,6 +133,7 @@ Well, not really why this works."
 ;;; donot use yasnippet mode in org mode
 (remove-hook 'org-mode-hook (lambda () (yas-minor-mode 0)))
 
+(add-hook 'org-mode-hook (lambda () (visual-line-mode t)))
 
 ;;; customize faces
 (after-load 'org
@@ -173,6 +182,8 @@ Well, not really why this works."
   (setq org-src-tab-acts-natively t)
   (setq org-src-preserve-indentation t))
 
-
+
+;;
 
 (provide 'dumeng-org)
+;;; dumeng-org.el ends here

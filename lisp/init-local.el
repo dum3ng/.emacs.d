@@ -12,7 +12,15 @@
 (smooth-scrolling-mode 1)
 
 
-;; (require 'dumeng-all-the-icons)
+;; define helper functions for use in follows
+(defun add-to-list-m (to from)
+  (dolist (ele from)
+    (add-to-list to ele)))
+
+
+(require 'smalltalk-mode)
+
+(require 'dumeng-all-the-icons)
 (require 'dumeng-customize-function)
 (require 'dumeng-customize-mode)
 (require 'dumeng-css)

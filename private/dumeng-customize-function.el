@@ -43,5 +43,10 @@ because all compilers consider the number of COLUMN from 1 (just for copy-past)"
   (interactive)
   (insert (current-time-string)))
 
+(defun time ()
+  "Show a message of current time."
+  (interactive)
+  (message (current-time-string)))
+
 (provide 'dumeng-customize-function)
 ;;; dumeng-customize-function ends here

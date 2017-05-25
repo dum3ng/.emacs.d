@@ -37,8 +37,8 @@
   '(add-hook 'js2-mode-hook #'add-node-modules-path))
 
 ;; ---customize
-
-
+;; disable flychck in clojure mode
+(setq flycheck-global-modes '(not clojure-mode))
 
 (provide 'dumeng-flycheck)
 ;;; dumeng-flycheck.el ends here

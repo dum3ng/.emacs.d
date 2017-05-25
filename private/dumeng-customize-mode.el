@@ -18,7 +18,10 @@
                                   ("\\.swift" . swift-mode)
                                   ("\\.bash" . shell-script-mode)
                                   ("\\.st" . smalltalk-mode)
-                                  ("webpack.*\\.config\\'" . rjsx-mode)))
+                                  ("webpack.*\\.config\\'" . rjsx-mode)
+                                  ("\\.hbs" . web-mode)
+                                  ("\\.component.html" . angular-html-mode)
+                                  ))
 
 
 (add-to-list 'interpreter-mode-alist '("node" . rjsx-mode))
