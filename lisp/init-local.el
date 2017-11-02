@@ -18,7 +18,7 @@
     (add-to-list to ele)))
 
 
-(require 'smalltalk-mode)
+;(require 'smalltalk-mode)
 
 (require 'dumeng-all-the-icons)
 (require 'dumeng-customize-function)
@@ -28,6 +28,7 @@
 (require 'dumeng-flycheck)
 (require 'dumeng-flymd)
 (require 'dumeng-html)
+(require 'dumeng-ivy)
 (require 'dumeng-js)
 (require 'dumeng-misc)
 (require 'dumeng-md)
