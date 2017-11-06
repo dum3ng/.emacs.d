@@ -17,8 +17,8 @@
 ;; (add-to-list 'all-the-icons-dir-icon-alist '("ios"          all-the-icons-fileicon "apple"                     :height 1.0 :v-adjust 0.0 ))
 
 ;; add my customized icon to fontawesome
-(add-to-list 'all-the-icons-data/fa-icon-alist
-             '("json" . "\xeff0"))
+;; (add-to-list 'all-the-icons-data/fa-icon-alist
+;;              '("json" . "\xeff0"))
 
 
 
@@ -37,7 +37,7 @@
                   all-the-icons-fileicon "cljs"
                   :face all-the-icons-lblue)
                  ("\\.json"
-                  all-the-icons-faicon "json"
+                  all-the-icons-octicon "code"
                   :face all-the-icons-yellow)
                  ("\\.meta"
                   all-the-icons-faicon "bars"
