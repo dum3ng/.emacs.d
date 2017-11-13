@@ -48,89 +48,57 @@ Well, not really why this works."
 
 ;;; org-publish settting
 
-(setq org-publish-project-alist '(("blog"
-                                   :components ("blog-home" "blog-static"
-                                                "blog-clojure"
-                                                "blog-ios"
-                                                "blog-javascript"
-                                                "blog-linux"
-                                                "blog-node"
-                                                "blog-python"
-                                                "blog-server"
-                                                "blog-web"))
-                                  ("blog-home"
-                                   :base-directory "~/blog"
-                                   :publishing-directory "~/blog_site"
-                                   :recursive nil
-                                   :base-extension "org"
-                                   :auto-preamble t
-                                   :publishing-function org-html-publish-to-html)
+(setq org-publish-project-alist '())
+;; sub folder
+(defun dm/org-add-subfolder (parent subs)
+  "PARENT is the parent folder string.
+SUBS is a list of sub folders."
 
-                                  ("blog-clojure"
-                                   :base-directory "~/blog/clojure"
-                                   :publishing-directory "~/blog_site/clojure"
-                                   :recursive t
-                                   :base-extension "org"
-                                   :auto-preamble t
-                                   :publishing-function org-html-publish-to-html
-                                   :makeindex t)
-                                  ("blog-ios"
-                                   :base-directory "~/blog/ios"
-                                   :publishing-directory "~/blog_site/ios"
-                                   :recursive t
-                                   :base-extension "org"
-                                   :auto-preamble t
-                                   :publishing-function org-html-publish-to-html
-                                   :makeindex t)
-                                  ("blog-javascript"
-                                   :base-directory "~/blog/javascript"
-                                   :publishing-directory "~/blog_site/javascript"
-                                   :recursive t
-                                   :base-extension "org"
-                                   :auto-preamble t
-                                   :publishing-function org-html-publish-to-html
-                                   :makeindex t)
-                                  ("blog-linux"
-                                   :base-directory "~/blog/linux"
-                                   :publishing-directory "~/blog_site/linux"
-                                   :recursive t
-                                   :base-extension "org"
-                                   :auto-preamble t
-                                   :publishing-function org-html-publish-to-html
-                                   :makeindex t)
-                                  ("blog-server"
-                                   :base-directory "~/blog/server"
-                                   :publishing-directory "~/blog_site/server"
-                                   :recursive t
-                                   :base-extension "org"
-                                   :auto-preamble t
-                                   :publishing-function org-html-publish-to-html
-                                   :makeindex t)
-                                  ("blog-python"
-                                   :base-directory "~/blog/python"
-                                   :publishing-directory "~/blog_site/python"
-                                   :recursive t
-                                   :base-extension "org"
-                                   :auto-preamble t
-                                   :publishing-function org-html-publish-to-html
-                                   :makeindex t)
-                                  ("blog-web"
-                                   :base-directory "~/blog/web"
-                                   :publishing-directory "~/blog_site/web"
-                                   :recursive t
-                                   :base-extension "org"
-                                   :auto-preamble t
-                                   :publishing-function org-html-publish-to-html
-                                   :makeindex t)
+  (let (vs)
+    (dolist (s subs vs)
+      (setq vs (cons (format "blog-%s-%s" parent s) vs)))
+    (setq org-publish-project-alist (cons `(,(format "blog-%s"  parent)
+                                            :components ,vs)
+                                          org-publish-project-alist)))
+  (while subs
+    (setq org-publish-project-alist (cons `(,(format "blog-%s-%s" parent (car subs))
+                                            :base-directory ,(format  "~/blog/%s/%s" parent (car subs))
+                                            :publishing-directory ,(format  "~/blog_site/%s/%s" parent (car subs))
+                                            :recursive nil
+                                            :base-extension "org"
+                                            :auto-preamble t
+                                            :makeindex t
+                                            :publishing-function org-html-publish-to-html)
+                                          org-publish-project-alist))
+    (setq subs (cdr subs))))
 
-                                  ("blog-static"
-                                   :base-directory "~/blog/"
-                                   :base-extension "css\\|js\\|png\\|jpg\\jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-                                   :publishing-directory "~/blog_site"
-                                   :recursive t
-                                   :publishing-function org-publish-attachment
-                                   )
-                                  ))
+
+(dm/org-add-subfolder "server" '("swift" "node" "clojure" "python" "misc"))
+(dm/org-add-subfolder "web" '("javascript" "css" ))
+(dm/org-add-subfolder "system" '( "linux"))
+
+
+(setq org-publish-project-alist (append '(("blog"
+                                           :components ("blog-home"
+                                                        "blog-static"
+                                                        "blog-server" "blog-web" "blog-system"))
+                                          ("blog-home"
+                                           :base-directory "~/blog"
+                                           :publishing-directory "~/blog_site"
+                                           :recursive nil
+                                           :base-extension "org"
+                                           :auto-preamble t
+                                           :publishing-function org-html-publish-to-html)
+
+                                          ("blog-static"
+                                           :base-directory "~/blog/"
+                                           :base-extension "css\\|js\\|png\\|jpg\\jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+                                           :publishing-directory "~/blog_site"
+                                           :recursive t
+                                           :publishing-function org-publish-attachment
+                                           )
+                                          )
+                                        org-publish-project-alist))
 
 
 ;;(setq org-html-head)
