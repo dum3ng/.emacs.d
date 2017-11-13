@@ -40,6 +40,11 @@ Well, not really why this works."
                               (fix-font))
     (progn (forecast--load-data)
            (forecast-insert))))
+
+(defun dm/org-publish-remove-all-timestamps ()
+  "set the publish timestamp to nil"
+  (interactive)
+  (org-publish-remove-all-timestamps))
 
 ;;; org-publish settting
 
