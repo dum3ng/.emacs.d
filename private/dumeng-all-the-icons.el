@@ -40,6 +40,7 @@
                                  :face all-the-icons-lblue)
                                 ("\\.json"
                                  all-the-icons-octicon "code"
+                                 :h-adjust 0.1
                                  :face all-the-icons-yellow)
                                 ("\\.meta"
                                  all-the-icons-faicon "bars"

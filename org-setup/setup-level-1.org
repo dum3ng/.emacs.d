@@ -1,7 +1,8 @@
 #+HTML_HEAD: <link href="https://cdn.bootcss.com/normalize/5.0.0/normalize.css" rel="stylesheet">
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/flatly/bootstrap.min.css" />
 
-#+HTML_HEAD: <script src="https://cdn.rawgit.com/Matt-Esch/virtual-dom/master/dist/virtual-dom.js"></script>
+
+#+HTML_HEAD: <script src="../static/virtual-dom.js"></script>
 
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../static/mystyle.css" />
 #+HTML_HEAD: <script src='../static/myscript.js'></script>

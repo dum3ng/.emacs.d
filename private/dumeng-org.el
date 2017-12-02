@@ -74,7 +74,7 @@ SUBS is a list of sub folders."
 
 
 (dm/org-add-subfolder "server" '("swift" "node" "clojure" "python" "misc"))
-(dm/org-add-subfolder "web" '("javascript" "css" ))
+(dm/org-add-subfolder "web" '("javascript" "css" "clojurescript" ))
 (dm/org-add-subfolder "system" '( "linux"))
 
 

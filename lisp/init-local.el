@@ -26,7 +26,6 @@
 (require 'dumeng-css)
 (require 'dumeng-dired)
 (require 'dumeng-flycheck)
-(require 'dumeng-flymd)
 (require 'dumeng-html)
 (require 'dumeng-ivy)
 (require 'dumeng-js)
