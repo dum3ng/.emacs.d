@@ -14,6 +14,15 @@
              `("melpa-stable" . ,(if sanityinc/no-ssl
                                      "http://stable.melpa.org/packages/"
                                    "https://stable.melpa.org/packages/")))
+
+;;; some helper functions
+(defun load-current-file ()
+  "load current file"
+  (interactive)
+  (if (buffer-file-name)
+      (load-file (buffer-file-name))
+    (message "no buffer to load")))
+
 
 ;;; for mac user
 (if *is-a-mac*
@@ -32,14 +41,14 @@
 ;;; theme
 (require-package 'zenburn-theme)
 (set-face-attribute 'region nil :background "#4F71A0"  )
-(set-face-attribute 'highlight nil :background "firebrick"  )
+(set-face-attribute 'highlight nil :background "#566A82"  )
 ;;(load-theme 'zenburn)
 
 
 
 ;;; add emoji support
 (require-package 'emojify)
-(require 'emojify)
+;;;(require 'emojify)
 ;;(global-emojify-mode 1)
 
 
@@ -47,6 +56,8 @@
 (require-package 'writeroom-mode)
 (require 'writeroom-mode)
 (add-hook 'writeroom-mode-hook (lambda () (visual-line-mode 1)))
+
+
 
 (provide 'dumeng-misc)
 ;;; dumeng-misc ends here

@@ -22,6 +22,11 @@
 
 (setq web-beautify-js-program "esformatter")
 
+(require 'prettier-js)
+(add-hook 'js2-mode-hook 'prettier-js-mode)
+
+(add-hook 'js2-mode-hook 'highlight-indentation-mode)
+(add-hook 'js2-mode-hook 'highlight-indentation-current-column-mode)
 
 (provide 'dumeng-js)
 ;;; dumeng-js ends here
