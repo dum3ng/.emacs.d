@@ -36,6 +36,7 @@
 (require 'dumeng-paredit)
 (require 'dumeng-python)
 (require 'dumeng-powerline)
+(require 'dumeng-reason)
 (require 'dumeng-yasnippet)
 ;; (require 'dumeng-test)
 (require 'dumeng-tips)
